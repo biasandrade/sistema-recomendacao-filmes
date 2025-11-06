@@ -26,7 +26,7 @@ Construir um sistema inteligente que recomende 5 filmes similares ao que o usuá
 
 ### 2. **Processamento de Texto (NLP)**
 - **Stemming** com Porter Stemmer para redução de palavras à raiz
-- Remoção de stop words em inglês (palavras comuns com pouca informação)
+- Remoção de stop words em inglês (palavras comuns, com pouca informação)
 - Normalização (lowercase, remoção de espaços)
 - Concatenação de todas as features em uma única string (tags)
 
@@ -121,8 +121,8 @@ O sistema demonstrou alta precisão na recomendação de filmes similares:
 ### NLP
 - Tokenização
 - Stemming (Porter Stemmer)
-- Bag of Words (BoW)
-- TF (Term Frequency)
+- Bag of Words (BoW) (texto em números)
+- TF (Term Frequency) (frequência da aparição da palavra)
 
 ## 📚 Aprendizados
 
@@ -137,10 +137,9 @@ Este projeto faz parte do curso **"Matemática e Estatística Aplicada Para Data
 ## 🔮 Melhorias Futuras
 
 - [ ] Implementar filtro colaborativo (user-based)
-- [ ] Adicionar ponderação TF-IDF
+- [ ] Adicionar ponderação TF-IDF (frequência e raridade da aparição da palavra)? (Talvez)
 - [ ] Interface web com Streamlit
 - [ ] Incluir avaliações de usuários (ratings)
-- [ ] Sistema híbrido (conteúdo + colaborativo)
 
 ## 👩‍💻 Autora
 
