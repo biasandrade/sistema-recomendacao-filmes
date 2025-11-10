@@ -6,48 +6,57 @@
 
 Sistema de recomendação de filmes baseado em filtragem por conteúdo usando Machine Learning. O sistema analisa características de filmes (gênero, elenco, diretor, sinopse) e recomenda títulos similares através de vetorização de texto e cálculo de similaridade de cosseno.
 
-## 🎯 Objetivo do Projeto
+---
 
-Construir um sistema inteligente que recomende 5 filmes similares ao que o usuário assistiu, mantendo-o engajado na plataforma. O projeto aplica conceitos de:
-- Processamento de Linguagem Natural (NLP)
-- Vetorização de texto
-- Álgebra linear (espaço vetorial e distância de cosseno)
-- Machine Learning não supervisionado
+## 🎬 Demonstração
 
-## 🔬 Metodologia
+![Sistema em Ação](images/demo.gif)
 
-### 1. **Preparação dos Dados**
-- Merge de datasets (filmes + elenco)
-- Extração de features relevantes: gênero, palavras-chave, elenco principal (top 3), diretor
-- Limpeza e remoção de valores ausentes
+**Exemplo de recomendação:**
+```python
+sistema_recomendacao('Avatar')
 
-### 2. **Processamento de Texto (NLP)**
-- **Stemming** com Porter Stemmer para redução de palavras à raiz
-- Remoção de stop words em inglês (palavras comuns, com pouca informação)
-- Normalização (lowercase, remoção de espaços)
-- Concatenação de todas as features em uma única string (tags)
+# Resultado:
+# Aliens vs Predator: Requiem
+# Aliens
+# Falcon Rising
+# Independence Day
+# Titan A.E.
+```
 
-### 3. **Vetorização**
-- **CountVectorizer** do scikit-learn com limite de 5000 features
-- Transformação de texto em matriz numérica esparsa
-- Cada filme representado como um vetor no espaço multidimensional
+<details>
+<summary>📊 <b>Ver mais exemplos de recomendações</b></summary>
 
-### 4. **Cálculo de Similaridade**
-- **Cosine Similarity** para medir distância entre vetores
-- Filmes com menor distância angular = maior similaridade
-- Ranking dos 5 filmes mais próximos
+| Filme Consultado | Top 5 Recomendações |
+|------------------|---------------------|
+| **Avengers: Age of Ultron** | Iron Man 3, Iron Man 2, Iron Man, Thor, The Avengers |
+| **Jurassic World** | Jurassic Park, The Lost World, Walking With Dinosaurs, Terminator Genisys, Jurassic Park III |
 
-## 📊 Dataset
+</details>
 
-- **Fonte**: [The Movie Database (TMDb)](https://developer.themoviedb.org/docs)
-- **Registros**: 4.806 filmes
-- **Features utilizadas**: 
-  - `genres`, `keywords`, `cast`, `crew`, `overview`
+---
 
-## 🛠️ Tecnologias Utilizadas
+## 🎯 Sobre o Projeto
+
+### **Objetivo**
+Construir um sistema inteligente que recomende 5 filmes similares ao que o usuário assistiu, mantendo-o engajado na plataforma.
+
+### **Metodologia**
+1. **Preparação de Dados:** Merge de datasets, extração de features (gênero, elenco, diretor, sinopse)
+2. **NLP:** Stemming, normalização e remoção de stop words
+3. **Vetorização:** CountVectorizer com 5.000 features
+4. **Similaridade:** Cosine similarity para medir distância entre filmes
+
+### **Dataset**
+- **Fonte:** [The Movie Database (TMDb)](https://developer.themoviedb.org/docs)
+- **Total:** 4.806 filmes processados
+
+---
+
+## 🛠️ Tecnologias
 
 ```python
-Python 3.13.5
+Python 3.13
 ├── pandas 2.3.0          # Manipulação de dados
 ├── numpy 2.3.1           # Computação numérica
 ├── scikit-learn 1.7.1    # Machine Learning
@@ -56,87 +65,105 @@ Python 3.13.5
 └── nltk 3.9.1            # NLP e stemming
 ```
 
-## 🚀 Como Usar
+---
 
-### Instalação
+## 🚀 Como Executar
+
+<details>
+<summary><b>📥 Clique para ver as instruções de instalação</b></summary>
+
+### **Pré-requisitos**
+- Python 3.8 ou superior
+- pip instalado
+- Jupyter Notebook
+
+### **Passo a passo**
 
 ```bash
-# Clone o repositório
+# 1. Clone o repositório
 git clone https://github.com/biasandrade/sistema-recomendacao-filmes.git
 
-# Entre na pasta
+# 2. Entre na pasta do projeto
 cd sistema-recomendacao-filmes
 
-# Instale as dependências
+# 3. Instale as dependências
 pip install -r requirements.txt
-```
 
-### Execução
+# 4. Obtenha os dados (ver seção abaixo)
 
-Abra o Jupyter Notebook e execute todas as células:
-
-```bash
+# 5. Abra o Jupyter Notebook
 jupyter notebook Projeto1_Filme_BeatrizAndrade.ipynb
 ```
 
-### Exemplo de Uso
+### **📂 Obtendo os Dados**
 
-```python
-# Recomendar filmes similares a "Avatar"
-sistema_recomendacao('Avatar')
+⚠️ Os arquivos CSV não estão incluídos no repositório devido ao tamanho (>25MB).
 
-# Output:
-# Aliens vs Predator: Requiem
-# Aliens
-# Falcon Rising
-# Independence Day
-# Titan A.E.
+**Opção 1:** Baixe da fonte original
+- [TMDb API](https://developer.themoviedb.org/docs)
+
+**Opção 2:** Entre em contato
+- 📧 biasandrade@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/andrade-beatriz/)
+
+Coloque os arquivos na pasta `dados/`:
+```
+dados/
+├── dataset_filmes.csv
+└── dataset_elenco.csv
 ```
 
-## 📈 Resultados
+</details>
 
-O sistema demonstrou alta precisão na recomendação de filmes similares:
-
-| Filme Consultado | Top 5 Recomendações |
-|------------------|---------------------|
-| **Avengers: Age of Ultron** | Iron Man 3, Iron Man 2, Iron Man, Thor, The Avengers |
-| **Jurassic World** | Jurassic Park, The Lost World, Walking With Dinosaurs, Terminator Genisys, Jurassic Park III |
-| **Avatar** | Aliens vs Predator: Requiem, Aliens, Falcon Rising, Independence Day, Titan A.E. |
+---
 
 ## 🧠 Conceitos Aplicados
 
-### Matemática e Estatística
+<details>
+<summary><b>Clique para expandir os conceitos técnicos</b></summary>
+
+### **Matemática e Estatística**
 - Álgebra Linear (vetores e espaços vetoriais)
 - Distância de cosseno
 - Similaridade entre vetores multidimensionais
 
-### Machine Learning
+### **Machine Learning**
 - Aprendizado não supervisionado
 - Sistemas de recomendação baseados em conteúdo
 - Feature engineering
 
-### NLP
+### **NLP**
 - Tokenização
 - Stemming (Porter Stemmer)
 - Bag of Words (BoW) (texto em números)
-- TF (Term Frequency) (frequência da aparição da palavra)
+- Term Frequency (frequência da aparição da palavra)
+
+</details>
+
+---
 
 ## 📚 Aprendizados
 
-Este projeto faz parte do curso **"Matemática e Estatística Aplicada Para Data Science, Machine Learning e IA"** da Data Science Academy, onde apliquei conceitos de:
+Este projeto faz parte do curso **"Matemática e Estatística Aplicada Para Data Science, Machine Learning e IA"** da Data Science Academy.
 
+**Habilidades desenvolvidas:**
 ✅ Vetorização de texto  
 ✅ Processamento de linguagem natural  
 ✅ Cálculo de similaridade  
 ✅ Sistemas de recomendação  
 ✅ Feature engineering  
 
+---
+
 ## 🔮 Melhorias Futuras
 
-- [ ] Implementar filtro colaborativo (user-based)
-- [ ] Adicionar ponderação TF-IDF (frequência e raridade da aparição da palavra)? (Talvez)
+- [ ] Implementar TF-IDF para melhor ponderação (frequência e raridade da aparição da palavra)? (Talvez)
+- [ ] Adicionar filtro colaborativo (user-based)
 - [ ] Interface web com Streamlit
 - [ ] Incluir avaliações de usuários (ratings)
+- [ ] Sistema híbrido (conteúdo + colaborativo)
+
+---
 
 ## 👩‍💻 Autora
 
@@ -145,6 +172,8 @@ Cientista de Dados | 18 anos de experiência com análise de dados
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Beatriz%20Andrade-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/andrade-beatriz/)
 [![Email](https://img.shields.io/badge/Email-biasandrade%40gmail.com-red?style=flat&logo=gmail)](mailto:biasandrade@gmail.com)
+
+---
 
 ## 📄 Licença
 
