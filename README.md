@@ -1,5 +1,3 @@
-# sistema-recomendacao-filmes
-
 # 🎬 Sistema de Recomendação de Filmes
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue.svg)](https://www.python.org/)
