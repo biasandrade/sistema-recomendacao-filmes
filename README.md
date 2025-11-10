@@ -12,6 +12,8 @@ Sistema de recomendação de filmes baseado em filtragem por conteúdo usando Ma
 
 ![Sistema em Ação](images/demo.gif)
 
+---
+
 **Exemplo de recomendação:**
 ```python
 sistema_recomendacao('Avatar')
