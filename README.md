@@ -146,9 +146,10 @@ dados/
 
 ## 📚 Aprendizados
 
-Este projeto faz parte do curso **"Matemática e Estatística Aplicada Para Data Science, Machine Learning e IA"** da Data Science Academy.
+Este projeto faz parte do curso  **"Matemática e Estatística Aplicada Para Data Science, Machine Learning e IA"** da Pós-graduação em Data Scienceda da Data Science Academy.
 
 **Habilidades desenvolvidas:**
+
 ✅ Vetorização de texto  
 ✅ Processamento de linguagem natural  
 ✅ Cálculo de similaridade  
@@ -163,7 +164,6 @@ Este projeto faz parte do curso **"Matemática e Estatística Aplicada Para Data
 - [ ] Adicionar filtro colaborativo (user-based)
 - [ ] Interface web com Streamlit
 - [ ] Incluir avaliações de usuários (ratings)
-- [ ] Sistema híbrido (conteúdo + colaborativo)
 
 ---
 
