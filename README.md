@@ -46,7 +46,7 @@ Construir um sistema inteligente que recomende 5 filmes similares ao que o usuá
 ### **Metodologia**
 1. **Preparação de Dados:** Merge de datasets, extração de features (gênero, elenco, diretor, sinopse)
 2. **NLP:** Stemming, normalização e remoção de stop words
-3. **Vetorização:** CountVectorizer com 5.000 features
+3. **Vetorização:** CountVectorizer com 5.000 features, transformação de texto em matriz numérica esparsa
 4. **Similaridade:** Cosine similarity para medir distância entre filmes
 
 ### **Dataset**
