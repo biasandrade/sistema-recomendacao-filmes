@@ -146,8 +146,6 @@ dados/
 
 ## 📚 Aprendizados
 
-Este projeto faz parte do curso  **"Matemática e Estatística Aplicada Para Data Science, Machine Learning e IA"** da Pós-graduação em Data Scienceda da Data Science Academy.
-
 **Habilidades desenvolvidas:**
 
 ✅ Vetorização de texto  
