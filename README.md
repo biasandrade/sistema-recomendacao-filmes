@@ -159,7 +159,6 @@ dados/
 ## 🔮 Melhorias Futuras
 
 - [ ] Implementar TF-IDF para melhor ponderação (frequência e raridade da aparição da palavra)? (Talvez)
-- [ ] Adicionar filtro colaborativo (user-based)
 - [ ] Interface web com Streamlit
 - [ ] Incluir avaliações de usuários (ratings)
 
