@@ -174,8 +174,9 @@ Cientista de Dados | 18 anos de experiência com análise de dados
 
 ---
 
-## 📄 Licença
 Este projeto faz parte do curso "Matemática e Estatística Aplicada Para Data Science, Machine Learning e IA" do curso de Pós-graduação em Data Scienceda da Data Science Academy.
+
+## 📄 Licença
 
 Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir.
 
